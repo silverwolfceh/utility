@@ -290,13 +290,19 @@
 			document.location.href = url;
 
 		}
+		function view_source()
+		{
+			document.location.href="https://github.com/silverwolfceh/ultility/blob/master/get_token.html";
+		}
 	</script>
 </head>
 <body>
 	<div style="margin: auto">
-		<p><input type="text" name="email" id="email" placeholder="Input your facebook email/phone" height="48"> </p>
-		<p><input type="password" name="passwd" id="passwd" placeholder="Input your facebook password"> </p>
-		<p><input type="button" name="gettoken" onclick="get_token()" value="Get Token" />
+		<p><input type="text" name="email" id="email" placeholder="Input your facebook email/phone" style='height: 30px;
+    width: 200px;'> </p>
+		<p><input type="password" name="passwd" id="passwd" placeholder="Input your facebook password" style='height: 30px;
+    width: 200px;'> </p>
+		<p><input type="button" name="gettoken" onclick="get_token()" value="Get Token" /><input type="button" name="gettoken" onclick="view_source()" value="View Source" /></p>
 	</div>
 
 </body>
