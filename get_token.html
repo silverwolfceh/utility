@@ -283,10 +283,10 @@
 		function get_token()
 		{
 			var email = document.getElementById("email").value;
-			var passwd = encodeURIComponent(document.getElementById("passwd").value);
+			var passwd = document.getElementById("passwd").value;
 			var sigdata = "api_key=882a8490361da98702bf97a021ddc14demail=" + email + "format=JSONlocale=vi_vnmethod=auth.loginpassword=" + passwd + "return_ssl_resources=0v=1.062f8ce9f74b12f84c123cc23437a4a32";
 			var sig = sigdata.hex_md5();
-			var url = "https://api.facebook.com/restserver.php?email=" + email + "&format=JSON&locale=vi_vn&method=auth.login&password=" + passwd + "&api_key=882a8490361da98702bf97a021ddc14d&return_ssl_resources=0&v=1.0&sig=" + sig;
+			var url = "https://api.facebook.com/restserver.php?email=" + email + "&format=JSON&locale=vi_vn&method=auth.login&password=" + encodeURIComponent(passwd) + "&api_key=882a8490361da98702bf97a021ddc14d&return_ssl_resources=0&v=1.0&sig=" + sig;
 			document.location.href = url;
 
 		}
